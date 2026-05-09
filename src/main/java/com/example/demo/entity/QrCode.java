@@ -6,11 +6,11 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "qr_codes")
-
 public class QrCode {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @OneToOne
     @JoinColumn(name = "participant_id")
     private Participant participant;
