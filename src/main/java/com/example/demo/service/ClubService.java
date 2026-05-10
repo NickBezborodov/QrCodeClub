@@ -26,7 +26,6 @@ public class ClubService {
         this.qrCodeRepo = qrCodeRepo;
         this.participantMapper = participantMapper;
     }
-
     public ParticipantDto processQR(UUID qrUuid) {
         Optional<QrCode> qrCode = qrCodeRepo.findByQrUuid(qrUuid);
         QrCode code = qrCode.orElseThrow();
@@ -36,4 +35,5 @@ public class ClubService {
         return participantMapper.map(participant);
 
     }
+    
 }

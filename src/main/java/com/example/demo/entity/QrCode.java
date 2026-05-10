@@ -1,9 +1,11 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.UUID;
 
+@Data
 @Entity
 @Table(name = "qr_codes")
 public class QrCode {
@@ -16,28 +18,5 @@ public class QrCode {
     private Participant participant;
     private UUID qrUuid;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Participant getParticipant() {
-        return participant;
-    }
-
-    public void setParticipant(Participant participant) {
-        this.participant = participant;
-    }
-
-    public UUID getQrUuid() {
-        return qrUuid;
-    }
-
-    public void setQrUuid(UUID qrUuid) {
-        this.qrUuid = qrUuid;
-    }
 
 }
