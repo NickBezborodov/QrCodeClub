@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ParticipantMapper {
-    public ParticipantDto map(Participant participant){
+    public ParticipantDto map(Participant participant) {
         return new ParticipantDto(
                 participant.getFirstName(),
                 participant.getLastName(),

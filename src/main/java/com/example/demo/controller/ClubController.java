@@ -33,8 +33,10 @@ public class ClubController {
     public ParticipantDto updateParticipant(@PathVariable Long id, @RequestBody ParticipantDto dto) {
         return clubService.updateParticipant(id, dto);
     }
+
     @DeleteMapping("/{id}")
-    public void deleteParticipant(@PathVariable Long id){
+    public void deleteParticipant(@PathVariable Long id) {
         clubService.deleteParticipant(id);
     }
+
 }
