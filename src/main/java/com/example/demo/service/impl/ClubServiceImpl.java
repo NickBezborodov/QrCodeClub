@@ -18,7 +18,6 @@ import java.util.UUID;
 
 @RequiredArgsConstructor
 @Service
-
 public class ClubServiceImpl implements ClubService {
     private final ParticipantRepo participantRepo;
     private final QrCodeRepo qrCodeRepo;

@@ -2,11 +2,13 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.ParticipantDto;
 import com.example.demo.service.ClubService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
+
 
 @RequestMapping("api/v1/club")
 @RestController
@@ -25,12 +27,12 @@ public class ClubController {
     }
 
     @PostMapping("/add/participant")
-    public ParticipantDto addParticipant(@RequestBody ParticipantDto dto) {
+    public ParticipantDto addParticipant(@Valid @RequestBody ParticipantDto dto) {
         return clubService.addParticipant(dto);
     }
 
     @PutMapping("/{id}")
-    public ParticipantDto updateParticipant(@PathVariable Long id, @RequestBody ParticipantDto dto) {
+    public ParticipantDto updateParticipant(@PathVariable Long id, @Valid @RequestBody ParticipantDto dto) {
         return clubService.updateParticipant(id, dto);
     }
 
